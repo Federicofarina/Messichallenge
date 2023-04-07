@@ -1,8 +1,8 @@
-****Messi Challenge****
+# Messi Challenge
 
 Click here to see deployed game
 
-**Description**
+##Description
 Would be too easy for Messi to shoot the ball into the goal so instead he propose a challenge: He needs to make it all the way to the opposite goal with the ball sticked to his feet while defenders try to touch him.
 
 **MVP**
