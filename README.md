@@ -20,16 +20,11 @@ Would be too easy for Messi to shoot the ball into the goal so instead he propos
 
 ## Data structure
 
-# main.js
+### game.js
 
 - splashScreen () {}
 - gameScreen () {}
 - gameOverScreen () {}
-
-# game.js
-
-- Game () {}
-- starLoop () {}
 - checkCollisions () {}
 - addDefender () {}
 - clearCanvas () {}
