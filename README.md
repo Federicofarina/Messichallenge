@@ -1,4 +1,5 @@
-**Messi Challenge**
+****Messi Challenge****
+
 Click here to see deployed game
 
 **Description**
@@ -19,9 +20,10 @@ Would be too easy for Messi to shoot the ball into the goal so instead he propos
 - Posibility of changing background, speed game and music.
 
 **Data structure**
-Splash Screen
-States y States Transitions
-List of states (views) of your game
+main.js
+- buildSplashScreen () {}
+- buildGameScreen () {}
+- buildGameOverScreen () {}
 
 **Task**
 List of tasks in order of priority
