@@ -20,10 +20,7 @@ Would be too easy for Messi to shoot the ball into the goal so instead he propos
 - Posibility of changing background, speed game and music.
 
 **Data structure**
-main.js
-- buildSplashScreen () {}
-- buildGameScreen () {}
-- buildGameOverScreen () {}
+
 
 **Task**
 List of tasks in order of priority
