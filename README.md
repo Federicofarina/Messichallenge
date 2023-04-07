@@ -20,9 +20,32 @@ Would be too easy for Messi to shoot the ball into the goal so instead he propos
 
 ## Data structure
 
+# main.js
+
+- splashScreen () {}
+- gameScreen () {}
+- gameOverScreen () {}
+
+# game.js
+
+- Game () {}
+- starLoop () {}
+- checkCollisions () {}
+- addDefender () {}
+- clearCanvas () {}
+- updateCanvas () {}
+- drawCanvas () {}
+- GameOver () {}
 
 ## Task
 List of tasks in order of priority
+
+## States y States Transitions
+Definition of the different states and their transition (transition functions)
+
+- splashScreen
+- gameScreen
+- gameOverScreen
 
 ## Links
 Trello Link
