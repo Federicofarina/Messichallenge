@@ -1,1 +1,47 @@
+body {
+    padding: 0;
+    text-align: center;
+    }
 
+  .game-intro {
+    float: center;
+    padding: 0% 0%;
+    background-image: url('/Assets/Estadio.jpg');
+    background-size: 100%;
+  }
+
+  #restart {
+    position: absolute;
+    transform: translate(20vw, 50vh);
+    }
+  
+  .game-intro p {
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;    
+  }
+  
+  .intro-img {
+    height: 350px;
+    align-items: center;
+  }
+  
+  .arrows-img {
+    width: 100px;
+  }
+  
+  body button {
+    font-size: 30px;
+    background-color: #4dd069;
+    color: #fff;
+    padding: 20px 40px;
+    border: 40;
+    box-shadow: 40;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  #game-board {
+      float: left;
+      padding: 20px 0px;
+  }

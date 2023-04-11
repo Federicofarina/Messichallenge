@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Style.css" />
+    <title>Messi Challenge</title>
+  </head>
+  <body>
+    <div class="game-intro">
+        <br />
+        <p>MESSI CHALLENGE!</p>
+      <img src="./Assets/Goat.png" alt="" class="intro-img" />
+      <br />
+      <button id="start">Kick Off!</button>
+      <p>Use the arrows to control Messi. Dodge the defender and score as many goals as you can!</p>
+      <img src="./Assets/Arrows.jpg" alt="" class="arrows-img" />
+    </div>
+    <div id="game-board">
+      <canvas id="canvas" width="860" height="700"></canvas>
+    </div>
+    <button id="restart">Restart Game</button>
+    <script type="text/javascript" src="Game.js"></script>
+  </body>
+</html>
