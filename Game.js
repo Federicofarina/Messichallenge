@@ -6,13 +6,13 @@ const startScreen = document.querySelector(".game-intro");
 
   //Pitch Image
   const pitchImg = new Image()
-  pitchImg.src = 'Assets/Pitch.jpg'
+  pitchImg.src = '/Assets/Pitch.jpg'
   //Messi Image
   const messiImg = new Image()
-  messiImg.src = 'Assets/Messi.png'
+  messiImg.src = '/Assets/Messi.png'
   //Defender Image
   const defenderImg = new Image()
-  defenderImg.src = 'Assets/Defender.png'
+  defenderImg.src = '/Assets/Defender.png'
 
 window.onload = () => {
   //hide the canvas until we press the start
