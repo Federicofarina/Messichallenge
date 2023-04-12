@@ -6,7 +6,6 @@ const startScreen = document.querySelector(".game-intro");
 
 window.onload = () => {
   //hide the canvas until we press the start
-
   const restartBtn = document.querySelector("#restart");
   restartBtn.style.display = "none";
   const startBtn = document.querySelector("#start")
@@ -41,13 +40,6 @@ window.onload = () => {
   let messiHeight = 70;
   let messiSpeed = 4;
 
-
-  
-  /*let defenderX = 100;
-  let defenderY = 100;
-  let defenderWidth = 100;
-  let defenderHeight = 120;*/
-
   let defenders = []
 
   class Defender {
@@ -58,7 +50,6 @@ window.onload = () => {
       this.height = height
       this.speed = speed
     }
-
   }
 
   const defender = () => {
@@ -90,16 +81,6 @@ window.onload = () => {
   let limitWidth = 755;
   let limitHeight = 638;
 
-  let gameOver = false
-  let animateId
-  let score = 0
-
-  const messi = () => {
-    ctx.beginPath()
-    ctx.drawImage(messiImg, messiX, messiY, messiWidth, messiHeight)
-    ctx.closePath()
-  }
-
   function drawRectangle () {
     document.getElementById('canvas');
     ctx.beginPath()
@@ -114,6 +95,16 @@ window.onload = () => {
     ctx.display
     ctx.closePath()
   };
+
+  let gameOver = false
+  let animateId
+  let score = 0
+
+  const messi = () => {
+    ctx.beginPath()
+    ctx.drawImage(messiImg, messiX, messiY, messiWidth, messiHeight)
+    ctx.closePath()
+  }
 
   function drawScore () {
     ctx.beginPath();
@@ -139,8 +130,6 @@ window.onload = () => {
         score++;
         defenders.push(new Defender(100, 200, 60, 80, 1))
 
-
-
       }else if(messiX < limitX ||
         // check if Messi´s left edge is to the left of the limit right edge
         messiX + messiWidth > limitX + limitWidth ||
@@ -151,7 +140,6 @@ window.onload = () => {
           console.log("collision!")
 
           gameOver = true;
-        
         };
         
         defenders.forEach(defender =>{
@@ -165,7 +153,6 @@ window.onload = () => {
     
               gameOver = true;
             }
-
         })
   };
 
@@ -182,6 +169,7 @@ window.onload = () => {
     drawRectangle()
     checkCollision()
 
+    //Messi's movement assignment
     if(isMovingLeft){
       messiX -= messiSpeed
     }
@@ -204,6 +192,7 @@ window.onload = () => {
     }
   }
 
+  //Arrow keys movement assignment
   document.addEventListener('keydown', event =>{
     //console.log(event)
     if (event.key === 'ArrowLeft'){
