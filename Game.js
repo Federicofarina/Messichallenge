@@ -22,13 +22,13 @@ window.onload = () => {
   }
   //Pitch Image
   const pitchImg = new Image()
-  pitchImg.src = '..Assets/Pitch.jpg'
+  pitchImg.src = 'Assets/Pitch.jpg'
   //Messi Image
   const messiImg = new Image()
-  messiImg.src = '..Assets/Messi.png'
+  messiImg.src = 'Assets/Messi.png'
   //Defender Image
   const defenderImg = new Image()
-  defenderImg.src = '..Assets/Defender.png'
+  defenderImg.src = 'Assets/Defender.png'
 
   let isMovingLeft = false;
   let isMovingRight = false;
