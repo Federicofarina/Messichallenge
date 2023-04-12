@@ -37,8 +37,8 @@ window.onload = () => {
 
   let messiX = 430;
   let messiY = 500;
-  let messiWidth = 70;
-  let messiHeight = 110;
+  let messiWidth = 40;
+  let messiHeight = 70;
   let messiSpeed = 4;
 
 
@@ -82,7 +82,7 @@ window.onload = () => {
   let rectX = 385;
   let rectY = 30;
   let rectWidth = 90;
-  let rectHeight = 4;
+  let rectHeight = 1;
 
   //Pitch Area
   let limitX = 52;
@@ -103,10 +103,15 @@ window.onload = () => {
   function drawRectangle () {
     document.getElementById('canvas');
     ctx.beginPath()
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = "red"
+    ctx.globalAlpha = 0,2;
     ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+    ctx.globalAlpha = 1,0;
+    ctx.globalAlpha = 0,2;
     ctx.strokeRect(limitX, limitY, limitWidth, limitHeight);
+    ctx.globalAlpha = 1,0;
     ctx.lineWidth = 3;
+    ctx.display
     ctx.closePath()
   };
 
@@ -132,7 +137,7 @@ window.onload = () => {
         messiY = 500;
 
         score++;
-        defenders.push(new Defender(100, 100, 100, 120, 1))
+        defenders.push(new Defender(100, 200, 60, 80, 1))
 
 
 
@@ -235,7 +240,7 @@ document.addEventListener('keyup', event =>{
     console.log("Kick Off");
     startScreen.style.display = "none";
     canvas.style.display = "block";
-    defenders.push(new Defender(100, 100, 100, 120, 1))
+    defenders.push(new Defender(100, 200, 60, 80, 1))
     animate()
     }
     startBtn.addEventListener('click', startGame)
