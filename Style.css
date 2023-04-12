@@ -6,7 +6,7 @@ body {
   .game-intro {
     float: center;
     padding: 0% 0%;
-    background-image: url('/Assets/Estadio.jpg');
+    background-image: url('Assets/Estadio.jpg');
     background-size: 100%;
   }
 
