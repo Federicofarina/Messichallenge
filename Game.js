@@ -3,12 +3,19 @@ canvas.style.border ="4px solid black";
 canvas.style.display = "none";
 const ctx = canvas.getContext('2d');
 const startScreen = document.querySelector(".game-intro");
+const winscreen = document.querySelector("#Winmessage");
+const loosescreen = document.querySelector("#Loosemessage")
+const gameMusic = document.getElementById('music');
+gameMusic.play();
+gameMusic.volume = 0.4;
 
 window.onload = () => {
   //hide the canvas until we press the start
   const restartBtn = document.querySelector("#restart");
   restartBtn.style.display = "none";
   const startBtn = document.querySelector("#start")
+  winscreen.style.display = "none";
+  loosescreen.style.display = "none";
 
   function restart () {
     messiX = 430;
@@ -18,6 +25,8 @@ window.onload = () => {
     score = 0;
     restartBtn.style.display = "none";
     startGame();
+    winscreen.style.display = "none"
+    loosescreen.style.display = "none"
   }
   //Pitch Image
   const pitchImg = new Image()
@@ -51,12 +60,6 @@ window.onload = () => {
       this.speed = speed
     }
   }
-
-  const defender = () => {
-    ctx.beginPath()
-    ctx.drawImage(defenderImg, defenderX, defenderY, defenderWidth, defenderHeight)
-    ctx.closePath()
-  }
   //Random movement of the Defender
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max-min+1)) +min;
@@ -83,7 +86,6 @@ window.onload = () => {
 
   function drawRectangle () {
     document.getElementById('canvas');
-    ctx.beginPath()
     ctx.fillStyle = "red"
     ctx.globalAlpha = 0,2;
     ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
@@ -92,8 +94,6 @@ window.onload = () => {
     ctx.strokeRect(limitX, limitY, limitWidth, limitHeight);
     ctx.globalAlpha = 1,0;
     ctx.lineWidth = 3;
-    ctx.display
-    ctx.closePath()
   };
 
   let gameOver = false
@@ -101,17 +101,18 @@ window.onload = () => {
   let score = 0
 
   const messi = () => {
-    ctx.beginPath()
     ctx.drawImage(messiImg, messiX, messiY, messiWidth, messiHeight)
-    ctx.closePath()
   }
 
   function drawScore () {
-    ctx.beginPath();
     ctx.font = "24px verdana";
     ctx.fillStyle = "yellow";
+    ctx.strokeStyle = "grey"
     ctx.fillText(`Score : ${score}`, 10, 24);
-    ctx.closePath
+    ctx.shadowOffsetX = 4;
+    ctx.shadowOffsetY = 4;
+    ctx.shadowBlur = 3;
+    ctx.shadowColor = "rgba(1, 1, 1, 1)";
   }
 
   function checkCollision() {
@@ -128,7 +129,8 @@ window.onload = () => {
         messiY = 500;
 
         score++;
-        defenders.push(new Defender(100, 200, 60, 80, 1))
+        checkWin(score)
+        defenders.push(new Defender(Math.random()*limitWidth , Math.random()*limitHeight, 60, 80, 1))
 
       }else if(messiX < limitX ||
         // check if Messi´s left edge is to the left of the limit right edge
@@ -161,9 +163,7 @@ window.onload = () => {
     ctx.drawImage(pitchImg, 0, 0, canvas.width, canvas.height);
     messi()
     defenders.forEach(defender =>{
-    ctx.beginPath()
     ctx.drawImage(defenderImg, defender.x, defender.y, defender.width, defender.height)
-    ctx.closePath()
     })
     drawScore()
     drawRectangle()
@@ -186,6 +186,12 @@ window.onload = () => {
     if (gameOver){
       cancelAnimationFrame(animateId);
       restartBtn.style.display = "block";
+      displayGameOver();
+    }
+    else if(score === 5){
+      cancelAnimationFrame(animateId);
+      restartBtn.style.display = "block";
+
     }
     else {
       animateId = requestAnimationFrame(animate)
@@ -234,4 +240,13 @@ document.addEventListener('keyup', event =>{
     }
     startBtn.addEventListener('click', startGame)
     restartBtn.addEventListener('click',restart)
+
+    function checkWin(score){
+      if(score === 5){
+        winscreen.style.display = "block"
+      }
+    }
+    function displayGameOver() {
+      loosescreen.style.display = "block"
+    }
   }  

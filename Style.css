@@ -1,6 +1,14 @@
 body {
     padding: 0;
     text-align: center;
+    align-items: center;
+    }
+
+    #canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
   .game-intro {
@@ -12,7 +20,7 @@ body {
 
   #restart {
     position: absolute;
-    transform: translate(20vw, 50vh);
+    transform: translate(43vw, 46vh);
     }
   
   .game-intro p {
@@ -32,16 +40,34 @@ body {
   
   body button {
     font-size: 30px;
-    background-color: #4dd069;
-    color: #fff;
-    padding: 20px 40px;
-    border: 40;
-    box-shadow: 40;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    background-color: #1a9f00;
+    color: #ffffff;
+    padding: 12px 40px;
+    border: 30px;
+    box-shadow: 10px, 10px;
+    box-shadow: #9b9b9b;
+    border-radius: 20px;
   }
   
   #game-board {
       float: left;
       padding: 20px 0px;
+  }
+
+  #Loosemessage {
+    position: absolute;
+    top: 33%;
+    left: 43%;
+    font-size: 40px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  }
+  #Winmessage {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 31%;
+    font-size: 40px;
+    color: #000000;
   }

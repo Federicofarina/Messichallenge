@@ -13,12 +13,19 @@
         <p>MESSI'S CHALLENGE!</p>
       <img src="./Assets/Goat.png" alt="" class="intro-img" />
       <br />
+      <audio id ="music" src="Muchachos.mp3" loop></audio>
       <button id="start">Kick Off!</button>
       <p>Use the arrows to control Messi. Dodge the defender and score as many goals as you can!</p>
       <img src="./Assets/Arrows.jpg" alt="" class="arrows-img" />
     </div>
     <div id="game-board">
       <canvas id="canvas" width="860" height="700"></canvas>
+    </div>
+    <div id="Winmessage">
+      <h3> you Made Messi GOAT again!</h3>
+    </div>
+    <div id="Loosemessage">
+      <h3>Game Over!</h3>
     </div>
     <button id="restart">Restart Game</button>
     <script type="text/javascript" src='Game.js'></script>
