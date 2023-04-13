@@ -7,7 +7,7 @@ const winscreen = document.querySelector("#Winmessage");
 const loosescreen = document.querySelector("#Loosemessage")
 const gameMusic = document.getElementById('music');
 gameMusic.play();
-gameMusic.loop=true;
+gameMusic.loop= true;
 gameMusic.volume = 0.4;
 
 window.onload = () => {
@@ -19,8 +19,8 @@ window.onload = () => {
   loosescreen.style.display = "none";
 
   function restart () {
-    messiX = 430;
-    messiY = 500;
+    messiX = 530;
+    messiY = 550;
     gameOver = false;
     defenders = []
     score = 0;
@@ -44,7 +44,7 @@ window.onload = () => {
   let isMovingUp = false;
   let isMovingDown = false;
 
-  let messiX = 430;
+  let messiX = 130;
   let messiY = 500;
   let messiWidth = 40;
   let messiHeight = 70;
@@ -63,7 +63,7 @@ window.onload = () => {
   }
   //Random movement of the Defender
   function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max-min+2)) +min;
+    return Math.floor(Math.random() * (max-min+1,5)) +min;
   }
 
   setInterval(function() {
@@ -71,7 +71,7 @@ window.onload = () => {
       defender.x += getRandomInt(-1,3);
       defender.y += getRandomInt(-1,1);
     })
-  }, 20);
+  }, 25);
 
   //Gol Line
   let rectX = 385;
@@ -126,8 +126,8 @@ window.onload = () => {
       messiY < rectY + rectHeight) {
 
         //Returns players to its initial position
-        messiX = 430;
-        messiY = 500;
+        messiX = 130;
+        messiY = 550;
 
         score++;
         checkWin(score)
