@@ -57,12 +57,12 @@ window.onload = () => {
       this.y = y
       this.width = width
       this.height = height
-      this.speed = speed
+      this.speed = speed;
     }
   }
   //Random movement of the Defender
   function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max-min+1)) +min;
+    return Math.floor(Math.random() * (max-min+2)) +min;
   }
 
   setInterval(function() {
@@ -70,7 +70,7 @@ window.onload = () => {
       defender.x += getRandomInt(-1,3);
       defender.y += getRandomInt(-1,1);
     })
-  }, 60);
+  }, 15);
 
   //Gol Line
   let rectX = 385;
@@ -130,7 +130,7 @@ window.onload = () => {
 
         score++;
         checkWin(score)
-        defenders.push(new Defender(Math.random()*limitWidth , Math.random()*limitHeight, 60, 80, 1))
+        defenders.push(new Defender(Math.random()*limitWidth , Math.random()*limitHeight, 60, 80, 3))
 
       }else if(messiX < limitX ||
         // check if Messi´s left edge is to the left of the limit right edge
