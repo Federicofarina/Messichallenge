@@ -62,15 +62,15 @@ window.onload = () => {
   }
   //Random movement of the Defender
   function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max-min+2)) +min;
+    return Math.floor(Math.random() * (max-min+3)) +min;
   }
 
   setInterval(function() {
     defenders.forEach(defender => {
-      defender.x += getRandomInt(-1,3);
+      defender.x += getRandomInt(-1,2);
       defender.y += getRandomInt(-1,1);
     })
-  }, 15);
+  }, 20);
 
   //Gol Line
   let rectX = 385;
