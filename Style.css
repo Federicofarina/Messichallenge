@@ -48,11 +48,6 @@ body {
     box-shadow: #9b9b9b;
     border-radius: 20px;
   }
-  
-  #game-board {
-      float: left;
-      padding: 20px 0px;
-  }
 
   #Loosemessage {
     position: absolute;

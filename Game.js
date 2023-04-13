@@ -187,7 +187,7 @@ window.onload = () => {
       restartBtn.style.display = "block";
       displayGameOver();
     }
-    else if(score === 3){
+    else if(score === 5){
       cancelAnimationFrame(animateId);
       restartBtn.style.display = "block";
     }
@@ -238,7 +238,7 @@ document.addEventListener('keyup', event =>{
     restartBtn.addEventListener('click',restart)
 
     function checkWin(score){
-      if(score === 3){
+      if(score === 5){
         winscreen.style.display = "block"
       }
     }
