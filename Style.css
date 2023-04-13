@@ -24,9 +24,9 @@ body {
     }
   
   .game-intro p {
-    font-size: 24px;
+    font-size: 32px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #fff;    
+    color: #ffffff;    
   }
   
   .intro-img {

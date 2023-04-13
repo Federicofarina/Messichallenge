@@ -7,6 +7,7 @@ const winscreen = document.querySelector("#Winmessage");
 const loosescreen = document.querySelector("#Loosemessage")
 const gameMusic = document.getElementById('music');
 gameMusic.play();
+gameMusic.loop=true;
 gameMusic.volume = 0.4;
 
 window.onload = () => {
