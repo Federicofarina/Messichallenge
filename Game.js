@@ -182,7 +182,6 @@ window.onload = () => {
     else if(isMovingUp){
         messiY -= messiSpeed
     };
-
     if (gameOver){
       cancelAnimationFrame(animateId);
       restartBtn.style.display = "block";
@@ -191,13 +190,11 @@ window.onload = () => {
     else if(score === 3){
       cancelAnimationFrame(animateId);
       restartBtn.style.display = "block";
-
     }
     else {
       animateId = requestAnimationFrame(animate)
     }
   }
-
   //Arrow keys movement assignment
   document.addEventListener('keydown', event =>{
     //console.log(event)
@@ -214,7 +211,6 @@ window.onload = () => {
         isMovingDown = true
       }
 })
-
 document.addEventListener('keyup', event =>{
   //console.log(event)
   if (event.key === 'ArrowLeft'){
