@@ -62,12 +62,12 @@ window.onload = () => {
   }
   //Random movement of the Defender
   function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max-min+3)) +min;
+    return Math.floor(Math.random() * (max-min+2)) +min;
   }
 
   setInterval(function() {
     defenders.forEach(defender => {
-      defender.x += getRandomInt(-1,2);
+      defender.x += getRandomInt(-1,3);
       defender.y += getRandomInt(-1,1);
     })
   }, 20);
@@ -242,7 +242,7 @@ document.addEventListener('keyup', event =>{
     restartBtn.addEventListener('click',restart)
 
     function checkWin(score){
-      if(score === 5){
+      if(score === 3){
         winscreen.style.display = "block"
       }
     }
