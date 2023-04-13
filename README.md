@@ -49,8 +49,8 @@ Definition of the different states and their transition (transition functions)
 
 [Presentation with Google Slides](https://docs.google.com/presentation/d/1pmoFIHECkyoOxwqNbK1eIAZy7SkXeT5HVKlFhPsm_Zk/edit?usp=sharing)
 
-[Github repository Link] (https://github.com/Federicofarina/Messichallenge)
+[Github repository Link](https://github.com/Federicofarina/Messichallenge)
 
-[Deployment Link] (https://federicofarina.github.io/Messichallenge/)
+[Deployment Link](https://federicofarina.github.io/Messichallenge/)
 
-[HTML Link] (http://127.0.0.1:5500/index.html)
+[HTML Link](http://127.0.0.1:5500/index.html)
