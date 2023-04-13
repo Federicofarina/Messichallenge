@@ -1,6 +1,6 @@
 # Messi's Challenge
 
-Click here to see deployed game
+[Click here to see deployed game](https://federicofarina.github.io/Messichallenge/)
 
 ## Description
 Would be too easy for Messi to shoot the ball into the goal so instead he propose a challenge: He needs to make it all the way to the opposite goal with the ball sticked to his feet while defenders try to touch him.
@@ -22,28 +22,35 @@ Would be too easy for Messi to shoot the ball into the goal so instead he propos
 
 ### game.js
 
-- splashScreen () {}
-- gameScreen () {}
-- gameOverScreen () {}
-- checkCollisions () {}
-- addDefender () {}
-- clearCanvas () {}
-- updateCanvas () {}
-- drawCanvas () {}
-- GameOver () {}
-
-## Task
-List of tasks in order of priority
+- onLoad()
+- restart()
+- Defender()
+- getRandomInt
+- SetInterval()
+- drawRectangle
+- drawScore
+- checkCollision()
+- keydown()
+- keyUp()
+- startGame()
+- checkWin()
+- displayGameOver()
 
 ## States y States Transitions
 Definition of the different states and their transition (transition functions)
 
-- splashScreen
-- gameScreen
-- gameOverScreen
+- Splash Screen
+- Game Screen
+- Win Screen
+- Game Over Screen
 
 ## Links
-Trello Link
 [Presentation with Figma](https://www.figma.com/proto/umol5xWzTkkOB2TH81WOBZ/Untitled?page-id=0%3A1&node-id=1-2&viewport=491%2C273%2C0.25&scaling=min-zoom)
-Github repository Link
-Deployment Link
+
+[Presentation with Google Slides](https://docs.google.com/presentation/d/1pmoFIHECkyoOxwqNbK1eIAZy7SkXeT5HVKlFhPsm_Zk/edit?usp=sharing)
+
+[Github repository Link] (https://github.com/Federicofarina/Messichallenge)
+
+[Deployment Link] (https://federicofarina.github.io/Messichallenge/)
+
+[HTML Link] (http://127.0.0.1:5500/index.html)
