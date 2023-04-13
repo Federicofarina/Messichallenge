@@ -1,4 +1,4 @@
-# Messi Challenge
+# Messi's Challenge
 
 Click here to see deployed game
 
@@ -44,6 +44,6 @@ Definition of the different states and their transition (transition functions)
 
 ## Links
 Trello Link
-Slides Link
+[Presentation with Figma](https://www.figma.com/proto/umol5xWzTkkOB2TH81WOBZ/Untitled?page-id=0%3A1&node-id=1-2&viewport=491%2C273%2C0.25&scaling=min-zoom)
 Github repository Link
 Deployment Link
