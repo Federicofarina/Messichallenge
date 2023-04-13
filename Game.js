@@ -188,7 +188,7 @@ window.onload = () => {
       restartBtn.style.display = "block";
       displayGameOver();
     }
-    else if(score === 5){
+    else if(score === 3){
       cancelAnimationFrame(animateId);
       restartBtn.style.display = "block";
 
